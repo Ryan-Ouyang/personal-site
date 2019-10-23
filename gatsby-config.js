@@ -6,4 +6,13 @@
 
 module.exports = {
   /* Your site config here */
+    pathPrefix: "/personal-site",
+    plugins: [
+      {
+        resolve: `gatsby-plugin-styled-components`,
+        options: {
+          // Add any options here
+        },
+      },
+    ],
 }
