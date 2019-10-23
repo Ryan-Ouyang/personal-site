@@ -75,7 +75,7 @@ const Tagline = styled.h1`
 `
 
 const Name = styled.span`
-    font-weight: 500;
+    font-weight: 700;
 `
 
 const ContactMe = styled.h1`
@@ -132,10 +132,10 @@ export default class Hero extends React.Component {
                 <Tagline>
                     I'm <Name>Ryan</Name>, a&nbsp;
                     <TextLoop interval={2000}>
-                        <span>blockchain aficionado</span>
-                        <span>keyboard enthusiast</span>
-                        <span>guitarist</span>
-                        <span>gelato connaisseur</span>
+                        <span>blockchain aficionado <InlineEmoji aria-label="blockchain">🕸</InlineEmoji></span>
+                        <span>keyboard enthusiast <InlineEmoji aria-label="computer-keyboard">⌨️</InlineEmoji></span>
+                        <span>guitarist <InlineEmoji aria-label="guitar">🎸</InlineEmoji></span>
+                        <span>gelato connaisseur <InlineEmoji aria-label="ice-cream">🍨</InlineEmoji></span>
                     </TextLoop>
                     <br></br>and aspiring developer studying CS at the
                     University of Waterloo{" "}
