@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import TextLoop from "react-text-loop"
+
 import {device} from "../../utils/media-queries"
 
 const HeroSection = styled.section`
@@ -43,7 +45,6 @@ const Tagline = styled.h1`
 const ContactMe = styled.h1`
     font-size: 1.25rem;
     font-weight: 400;
-
 `
 
 export default class Hero extends React.Component {
@@ -51,7 +52,13 @@ export default class Hero extends React.Component {
         return(
             <HeroSection>
                 <Hey>Hey!</Hey>
-                <Tagline>I'm Ryan Ouyang, a blockchain enthusiast and aspiring developer studying Computer Science at the University of Waterloo</Tagline>
+                <Tagline>I'm Ryan Ouyang, a&nbsp;
+                <TextLoop>
+                    <span>blockchain aficionado</span>
+                    <span>guitarist</span>
+                    <span>mech keyboard enthusiast</span>
+                </TextLoop>
+                 <br></br>and aspiring developer studying Computer Science at the University of Waterloo</Tagline>
                 <ContactMe>Hit Me Up! --></ContactMe>
             </HeroSection>
         )
