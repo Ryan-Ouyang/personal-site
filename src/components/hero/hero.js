@@ -131,7 +131,7 @@ export default class Hero extends React.Component {
                 <Hey>Hey there!</Hey>
                 <Tagline>
                     I'm <Name>Ryan</Name>, a&nbsp;
-                    <TextLoop>
+                    <TextLoop interval={2000}>
                         <span>blockchain aficionado</span>
                         <span>keyboard enthusiast</span>
                         <span>guitarist</span>
