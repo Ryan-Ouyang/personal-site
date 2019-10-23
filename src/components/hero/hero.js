@@ -12,13 +12,14 @@ const HeroSection = styled.section`
     justify-content: space-around;
     max-width: 1440px;
     margin: 0 auto;
-    background-color: #fffff4
 
     padding: 150px 100px;
     @media ${device.desktop} { padding: 150px 100px }
     @media ${device.laptop} { padding: 150px 100px }
     @media ${device.tablet} { padding: 100px 70px }
     @media ${device.mobile} { padding: 70px 50px }
+
+    span: { white-space: pre }
 `
 
 const Hey = styled.h1`
@@ -35,6 +36,7 @@ const Tagline = styled.h1`
     font-size: 2.25rem;
     font-weight: 300;
     max-width: 750px;
+    line-height: 1.6;
 
     @media ${device.desktop} { font-size: 2.5rem; max-width: 750px; }
     @media ${device.laptop} { font-size: 2.25rem; max-width: 600px; }
@@ -42,24 +44,73 @@ const Tagline = styled.h1`
     @media ${device.mobile} { font-size: 1.75rem; max-width: 325px; }
 `
 
+const Name = styled.span`
+    font-weight: 500
+`
+
 const ContactMe = styled.h1`
     font-size: 1.25rem;
     font-weight: 400;
+    line-height: 1.9;
 `
 
+const Email = styled.a`
+    href: "mailto:contact@ryanouyang.me";
+    target: "_blank";
+
+    //Highlight taken from https://codepen.io/MishaHahaha/pen/AXxYKQ
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    padding: 0 1px;
+    transition: color ease 0.3s;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 10%;
+        left: 0;
+        bottom: 0;
+        background-color: #87ceeb;
+        transition: all ease 0.3s;
+    }
+    
+    &:hover {
+        color: black;
+        
+        &::after {
+        height: 105%;
+        }
+    }
+`
+
+const Emoji = styled.span`
+    role: img;
+    aria-label: pointing-right;
+`
+
+const InlineEmoji = styled(Emoji)`
+    font-size: 2.5rem;
+    font-weight: 1.5rem;
+`
 export default class Hero extends React.Component {
     render () {
         return(
             <HeroSection>
-                <Hey>Hey!</Hey>
-                <Tagline>I'm Ryan Ouyang, a&nbsp;
+                <Hey>Hey there!</Hey>
+                <Tagline>I'm <Name>Ryan</Name>, a&nbsp;
                 <TextLoop>
-                    <span>blockchain aficionado</span>
+                    <span>blockchain aficionado</span> 
+                    <span>keyboard enthusiast</span>
                     <span>guitarist</span>
-                    <span>mech keyboard enthusiast</span>
+                    <span>gelato connaisseur</span>
                 </TextLoop>
-                 <br></br>and aspiring developer studying Computer Science at the University of Waterloo</Tagline>
-                <ContactMe>Hit Me Up! --></ContactMe>
+                 <br></br>and aspiring developer studying CS at the University of Waterloo <InlineEmoji>🚀</InlineEmoji></Tagline>
+                <ContactMe>Feel free to reach out &nbsp;<InlineEmoji>👉</InlineEmoji> &nbsp;<Email>contact@ryanouyang.me</Email></ContactMe>
             </HeroSection>
         )
     }
