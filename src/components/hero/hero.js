@@ -71,6 +71,10 @@ const Tagline = styled.h1`
     @media ${device.mobile} {
         font-size: 1.75rem;
         max-width: 325px;
+
+        br {
+            display: none;
+        }
     }
 `
 
@@ -124,6 +128,17 @@ const InlineEmoji = styled.span.attrs({
     font-size: 2.5rem;
     font-weight: 1.5rem;
 `
+
+const LoopingText = styled.span`
+    display: inline-block;
+`
+
+const StyledTextLoop = styled(TextLoop)`
+    @media ${device.mobile} {
+        display: block;
+    }
+`
+
 export default class Hero extends React.Component {
     render() {
         return (
@@ -131,13 +146,13 @@ export default class Hero extends React.Component {
                 <Hey>Hey there!</Hey>
                 <Tagline>
                     I'm <Name>Ryan</Name>, a&nbsp;
-                    <TextLoop interval={2000}>
-                        <span>blockchain aficionado <InlineEmoji aria-label="blockchain">🕸</InlineEmoji></span>
-                        <span>keyboard enthusiast <InlineEmoji aria-label="computer-keyboard">⌨️</InlineEmoji></span>
-                        <span>guitarist <InlineEmoji aria-label="guitar">🎸</InlineEmoji></span>
-                        <span>gelato connaisseur <InlineEmoji aria-label="ice-cream">🍨</InlineEmoji></span>
-                    </TextLoop>
-                    <br></br>and aspiring developer studying CS at the
+                    <StyledTextLoop interval={2000}>
+                        <LoopingText>blockchain aficionado <InlineEmoji aria-label="web">🕸</InlineEmoji></LoopingText>
+                        <LoopingText>keyboard enthusiast <InlineEmoji aria-label="computer-keyboard">⌨️</InlineEmoji></LoopingText>
+                        <LoopingText>guitarist <InlineEmoji aria-label="guitar">🎸</InlineEmoji></LoopingText>
+                        <LoopingText>gelato connaisseur <InlineEmoji aria-label="ice-cream">🍨</InlineEmoji></LoopingText>
+                    </StyledTextLoop>
+                    {" "}<br></br>and aspiring developer studying CS at the
                     University of Waterloo{" "}
                     <InlineEmoji aria-label="rocket">🚀</InlineEmoji>
                 </Tagline>
