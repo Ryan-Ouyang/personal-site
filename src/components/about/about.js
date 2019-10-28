@@ -3,6 +3,8 @@ import styled from "styled-components"
 
 import { device } from "../../utils/media-queries"
 
+import TwoColumns from '../twocolumns';
+
 const AboutSection = styled.section`
     box-sizing: border-box;
     max-width: 1440px;
@@ -23,39 +25,18 @@ const AboutSection = styled.section`
     }
 `
 
-const TwoColumns = styled.div`
-    display: flex;
-    flex-direction: row;
-
-    @media ${device.tablet} {
-        flex-direction: column;
-    }
-`
-
-const Column = styled.div``
-
-const LeftColumn = styled(Column)`
-    flex-grow: 3;
-    background-color: #ddd;
-`
-
-const RightColumn = styled(Column)`
-    flex-grow: 8;
-    background-color: #eee;
-`
-
 export default class About extends React.Component {
     render() {
         return (
             <AboutSection>
-                <TwoColumns>
-                    <LeftColumn>
-                        <h1>test</h1>
-                    </LeftColumn>
-                    <RightColumn>
-                        <h1>test</h1>
-                    </RightColumn>
-                </TwoColumns>
+                <TwoColumns 
+                    leftColumn={
+                        <h1>About</h1>
+                    }
+                    rightColumn={
+                        <p>Hey!</p>
+                    }
+                />
             </AboutSection>
         )
     }
