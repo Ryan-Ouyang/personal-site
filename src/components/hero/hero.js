@@ -51,22 +51,22 @@ const Hey = styled.h1`
 `
 
 const Tagline = styled.h1`
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: 300;
     max-width: 750px;
     line-height: 1.6;
 
     @media ${device.desktop} {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
         max-width: 750px;
     }
     @media ${device.laptop} {
-        font-size: 2.25rem;
-        max-width: 600px;
+        font-size: 2.5rem;
+        max-width: 700px;
     }
     @media ${device.tablet} {
         font-size: 2rem;
-        max-width: 500px;
+        max-width: 550px;
     }
     @media ${device.mobile} {
         font-size: 1.75rem;
@@ -79,7 +79,7 @@ const Tagline = styled.h1`
 `
 
 const Name = styled.span`
-    font-weight: 900;
+    font-weight: 700;
 `
 
 const ContactMe = styled.h1`
@@ -125,8 +125,8 @@ const Email = styled.a`
 const InlineEmoji = styled.span.attrs({
     role: "img",
 })`
-    font-size: 2.5rem;
     font-weight: 1.5rem;
+    display: inline-block;
 `
 
 const LoopingText = styled.span`
@@ -134,6 +134,8 @@ const LoopingText = styled.span`
 `
 
 const StyledTextLoop = styled(TextLoop)`
+    display: inline-block;
+
     @media ${device.mobile} {
         display: block;
     }
