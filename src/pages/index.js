@@ -24,7 +24,7 @@ export default class App extends React.Component {
             <>
                 <GlobalStyle />
                 <Hero />
-                {/* <About /> */}
+                <About />
             </>
         )
     }
