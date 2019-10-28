@@ -51,7 +51,7 @@ const Hey = styled.h1`
 `
 
 const Tagline = styled.h1`
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-weight: 300;
     max-width: 750px;
     line-height: 1.6;
@@ -79,7 +79,7 @@ const Tagline = styled.h1`
 `
 
 const Name = styled.span`
-    font-weight: 700;
+    font-weight: 900;
 `
 
 const ContactMe = styled.h1`
@@ -92,7 +92,7 @@ const Email = styled.a`
     href: "mailto:contact@ryanouyang.me";
     target: "_blank";
 
-    //Highlight taken from https://codepen.io/MishaHahaha/pen/AXxYKQ
+    //Highlight taken from Misha Heesakkers: https://codepen.io/MishaHahaha/pen/AXxYKQ
     cursor: pointer;
     position: relative;
     text-decoration: none;
@@ -145,11 +145,11 @@ export default class Hero extends React.Component {
             <HeroSection>
                 <Hey>Hey there!</Hey>
                 <Tagline>
-                    I'm <Name>Ryan</Name>, a&nbsp;
+                    I'm <Name>Ryan</Name>, a{" "}
                     <StyledTextLoop interval={2000}>
                         <LoopingText>blockchain aficionado <InlineEmoji aria-label="web">🕸</InlineEmoji></LoopingText>
                         <LoopingText>keyboard enthusiast <InlineEmoji aria-label="computer-keyboard">⌨️</InlineEmoji></LoopingText>
-                        <LoopingText>guitarist <InlineEmoji aria-label="guitar">🎸</InlineEmoji></LoopingText>
+                        <LoopingText>guitar noodler <InlineEmoji aria-label="guitar">🎸</InlineEmoji></LoopingText>
                         <LoopingText>gelato connaisseur <InlineEmoji aria-label="ice-cream">🍨</InlineEmoji></LoopingText>
                     </StyledTextLoop>
                     {" "}<br></br>and aspiring developer studying CS at the
