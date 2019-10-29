@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { device } from "../../utils/media-queries"
 
 import TwoColumns from '../twocolumns';
+import SectionHeading from '../sectionheading';
 
 const AboutSection = styled.section`
     box-sizing: border-box;
@@ -31,10 +32,16 @@ export default class About extends React.Component {
             <AboutSection>
                 <TwoColumns 
                     leftColumn={
-                        <h1>About</h1>
+                        <SectionHeading>About</SectionHeading>
                     }
                     rightColumn={
-                        <p>Hey!</p>
+                        <p>
+                            I'm currently studying Computer Science at the University of Waterloo.
+                            <br></br>
+                            I was a technical development intern at <a href="http://jonahgroup.com">The Jonah Group</a> writing smart contracts and assisting with devops on Hyperledger fintech projects centered in fintech. I'm also a hackathon addict, with 10 under my belt and counting.
+                            <br></br>
+                            In my free time, I play piano, guitar, and sing mostly blues, rock and metal music. In the winter you can find me on ski hills, bombing down steep trails that frighten my parents.
+                        </p>
                     }
                 />
             </AboutSection>

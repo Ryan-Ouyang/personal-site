@@ -17,11 +17,20 @@ const Container = styled.div`
 const Column = styled.div``
 
 const LeftColumn = styled(Column)`
-    flex-grow: 1;
+    flex-basis: 33%;
+
+    @media ${device.tablet} {
+        width: 100%
+    }
 `
 
+
 const RightColumn = styled(Column)`
-    flex-grow: 2;
+    flex-basis: 67%;
+
+    @media ${device.tablet} {
+        width: 100%
+    }
 `
 
 export default class TwoColumns extends React.Component {

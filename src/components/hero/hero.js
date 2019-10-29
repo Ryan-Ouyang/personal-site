@@ -154,8 +154,7 @@ export default class Hero extends React.Component {
                         <LoopingText>guitar noodler <InlineEmoji aria-label="guitar">🎸</InlineEmoji></LoopingText>
                         <LoopingText>gelato connaisseur <InlineEmoji aria-label="ice-cream">🍨</InlineEmoji></LoopingText>
                     </StyledTextLoop>
-                    {" "}<br></br>and aspiring developer studying CS at the
-                    University of Waterloo{" "}
+                    {" "}<br></br>and aspiring developer hacking things together with cool new tech.{" "}
                     <InlineEmoji aria-label="rocket">🚀</InlineEmoji>
                 </Tagline>
                 <ContactMe>
