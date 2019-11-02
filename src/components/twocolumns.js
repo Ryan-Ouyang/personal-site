@@ -34,10 +34,6 @@ const RightColumn = styled(Column)`
 `
 
 export default class TwoColumns extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         return(
             <Container>

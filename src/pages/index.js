@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby'
 import { createGlobalStyle } from 'styled-components';
 
 import Hero from "../components/hero/hero"
@@ -18,14 +19,28 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
-export default class App extends React.Component {
-    render() {
-        return(
-            <>
-                <GlobalStyle />
-                <Hero />
-                {/* <About /> */}
-            </>
-        )
-    }
+const Index = ({data}) => {
+    //console.log(data)
+    return(
+        <>
+            <GlobalStyle />
+            <Hero />
+            <About headshot={data.fileName.childImageSharp.fluid}/>
+        </>
+    )
 }
+
+// For the headshot in the about section
+export const query = graphql`
+    query {
+        fileName: file(relativePath: { eq: "ProfilePictureAlmostSquare.jpg" }) {
+            childImageSharp {
+                fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`
+
+export default Index;
