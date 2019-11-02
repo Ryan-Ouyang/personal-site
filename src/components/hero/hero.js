@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 import TextLoop from "react-text-loop"
 
-import { device } from "../../utils/media-queries"
+import { device, contentWidth } from "../../utils/media-queries"
 
 const HeroSection = styled.section`
     box-sizing: border-box;
@@ -12,7 +12,7 @@ const HeroSection = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    max-width: 1440px;
+    max-width: ${contentWidth};
     margin: 0 auto;
 
     padding: 150px 100px;

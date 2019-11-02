@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import Img from "gatsby-image"
 
-import { device } from "../../utils/media-queries"
+import { device, contentWidth } from "../../utils/media-queries"
 
 import TwoColumns from "../twocolumns"
 
@@ -13,7 +13,7 @@ const AboutSection = styled.section`
     }
 
     box-sizing: border-box;
-    max-width: 1440px;
+    max-width: ${contentWidth};
     margin: 0 auto;
 
     padding: 20px 100px;

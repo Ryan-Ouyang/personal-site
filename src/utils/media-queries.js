@@ -4,10 +4,16 @@ const size = {
     laptop: '1080px',
     desktop: '2560px',
 }
-
-export const device = {
+const device  ={
     mobile: `(max-width: ${size.mobile})`,
     tablet: `(max-width: ${size.tablet})`,
     laptop: `(max-width: ${size.laptop})`,
     desktop: `(max-width: ${size.desktop})`,
+}
+
+const contentWidth = '1440px'
+
+module.exports ={
+    device: device,
+    contentWidth: contentWidth
 };
