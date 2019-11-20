@@ -10,7 +10,6 @@ const Container = styled.div`
 
     @media ${device.tablet} {
         flex-direction: column;
-        text-align: center;
     }
 `
 

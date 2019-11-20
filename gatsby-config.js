@@ -9,6 +9,19 @@ module.exports = {
   /* Your site config here */
     // pathPrefix: "/personal-site",
     plugins: [
+      {
+        resolve: 'gatsby-plugin-manifest',
+        options: {
+          name: "Ryan Ouyang's Personal Website",
+          short_name: "Ryan Ouyang",
+          start_url: "/",
+          background_color: "#fffff4",
+          theme_color: "#fffff4",
+          display: "standalone",
+          icon: "src/assets/images/icon.png",
+          crossOrigin: `use-credentials`,
+        },
+      },
       'gatsby-plugin-sharp',
       'gatsby-transformer-sharp',
       {

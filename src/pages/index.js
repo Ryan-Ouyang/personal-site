@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from 'gatsby'
 import { createGlobalStyle } from 'styled-components';
 
+import GlobalWrapper from "../components/globalwrapper"
 import Hero from "../components/hero/hero"
 import About from "../components/about/about"
 import Timeline from "../components/timeline/timeline"
@@ -23,12 +24,12 @@ const GlobalStyle = createGlobalStyle`
 const Index = ({data}) => {
     //console.log(data)
     return(
-        <>
+        <GlobalWrapper>
             <GlobalStyle />
             <Hero />
             <About headshot={data.fileName.childImageSharp.fluid}/>
             <Timeline />
-        </>
+        </GlobalWrapper>
     )
 }
 
