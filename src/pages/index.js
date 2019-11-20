@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import Hero from "../components/hero/hero"
 import About from "../components/about/about"
+import Timeline from "../components/timeline/timeline"
 
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap');
@@ -26,6 +27,7 @@ const Index = ({data}) => {
             <GlobalStyle />
             <Hero />
             <About headshot={data.fileName.childImageSharp.fluid}/>
+            <Timeline />
         </>
     )
 }
