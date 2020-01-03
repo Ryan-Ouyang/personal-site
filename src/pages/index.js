@@ -5,7 +5,7 @@ import { createGlobalStyle } from 'styled-components';
 import GlobalWrapper from "../components/globalwrapper"
 import Hero from "../components/hero/hero"
 import About from "../components/about/about"
-import Timeline from "../components/timeline/timeline"
+//import Timeline from "../components/timeline/timeline"
 
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap');

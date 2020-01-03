@@ -86,7 +86,7 @@ export default class About extends React.Component {
                         <BioContainer>
                             <Bio>
                                 Currently in my first year of Computer Science at the
-                                University of Waterloo.{" "}
+                                University of Waterloo and working on a layer 1 <Hyperlink href="https://devpost.com/software/connexion-vy3a9c">messaging solution</Hyperlink> for Ethereum.{" "}
                             </Bio>
                             <Bio>
                                 Previously at{" "}
