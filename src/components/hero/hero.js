@@ -165,7 +165,7 @@ export default class Hero extends React.Component {
                         👉
                     </InlineEmoji>{" "}
                     &nbsp;
-                    <Email>contact@ryanouyang.com</Email>
+                    <Email href="mailto:contact@ryanouyang.com">contact@ryanouyang.com</Email>
                 </ContactMe>
             </HeroSection>
         )
