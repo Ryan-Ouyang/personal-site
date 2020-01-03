@@ -28,7 +28,7 @@ const Index = ({data}) => {
             <GlobalStyle />
             <Hero />
             <About headshot={data.fileName.childImageSharp.fluid}/>
-            <Timeline />
+            {/* <Timeline /> */}
         </GlobalWrapper>
     )
 }
