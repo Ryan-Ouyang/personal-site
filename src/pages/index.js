@@ -27,7 +27,7 @@ const Index = ({data}) => {
         <GlobalWrapper>
             <GlobalStyle />
             <Hero />
-            <About headshot={data.fileName.childImageSharp.fluid}/>
+            <About headshot={data.headshot.childImageSharp.fluid}/>
             {/* <Timeline /> */}
         </GlobalWrapper>
     )
@@ -36,7 +36,7 @@ const Index = ({data}) => {
 // For the headshot in the about section
 export const query = graphql`
     query {
-        fileName: file(relativePath: { eq: "ProfilePictureAlmostSquare.jpg" }) {
+        headshot: file(relativePath: { eq: "ProfilePictureAlmostSquare.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
                     ...GatsbyImageSharpFluid
