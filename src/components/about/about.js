@@ -88,7 +88,7 @@ const Hyperlink = styled.a`
 `
 
 const LinkContainer = styled.div`
-    display: inline-block;
+    display: inline-block
 `
 
 const LinkIconImg = styled.img`
@@ -98,10 +98,19 @@ const LinkIconImg = styled.img`
     margin-top: 10px;
     margin-left: 15px;
     margin-right: 15px;
+
+    @media ${device.mobile} {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 `
 
 const LeftmostLinkIconImg = styled(LinkIconImg)`
     margin-left: 5px;
+
+    @media ${device.mobile} {
+        margin-left: 0px;
+    }
 `
 
 export default class About extends React.Component {

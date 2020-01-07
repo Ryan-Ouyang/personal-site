@@ -8,7 +8,7 @@ import About from "../components/about/about"
 //import Timeline from "../components/timeline/timeline"
 
 const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,600,700&display=swap');
 
     html {
         height: 100%;

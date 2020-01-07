@@ -100,7 +100,7 @@ const Email = styled.a`
     text-decoration: none;
     display: inline-block;
     color: black;
-    padding: 0 1px;
+    padding: 0 3px;
     transition: color ease 0.3s;
 
     &::after {
