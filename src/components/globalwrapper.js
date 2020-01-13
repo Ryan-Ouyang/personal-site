@@ -13,7 +13,7 @@ export default class GlobalWrapper extends React.Component {
 
                     <meta property="og:title" content="Ryan Ouyang's Personal Website" />
                     <meta property="og:type" content="website" />
-                    <meta property="og:url" content="http://ryanouyang.com" />
+                    <meta property="og:url" content="https://ryanouyang.com" />
                     {/* <meta property="og:image" content="../../assets" /> */}
 
                     <title>Ryan Ouyang</title>

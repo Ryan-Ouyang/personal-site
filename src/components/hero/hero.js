@@ -4,6 +4,10 @@ import React from "react"
 import styled from "styled-components"
 import TextLoop from "react-text-loop"
 
+// For bottom arrow
+import { ChevronsDown } from "styled-icons/boxicons-regular/ChevronsDown"
+import { FadeInUp } from "animate-css-styled-components"
+
 import { device, contentWidth } from "../../utils/media-queries"
 
 const HeroSection = styled.section`
@@ -143,31 +147,50 @@ const StyledTextLoop = styled(TextLoop)`
     }
 `
 
+// ADD styled-icons downward "learn more" arrow
+const BottomArrow = styled(ChevronsDown)`
+    position: absolute;
+
+    left: 50%;
+    margin-left: -17.5px;
+    bottom: 5px;
+
+    max-height: 35px;
+    max-width: 35px;
+`
+
 export default class Hero extends React.Component {
     render() {
         return (
-            <HeroSection>
-                <Hey>Hey there!</Hey>
-                <Tagline>
-                    I'm <Name>Ryan</Name>, a{" "}
-                    <StyledTextLoop interval={2000}>
-                        <LoopingText>blockchain aficionado <InlineEmoji aria-label="web">🕸</InlineEmoji></LoopingText>
-                        <LoopingText>keyboard enthusiast <InlineEmoji aria-label="computer-keyboard">⌨️</InlineEmoji></LoopingText>
-                        <LoopingText>guitar noodler <InlineEmoji aria-label="guitar">🎸</InlineEmoji></LoopingText>
-                        <LoopingText>gelato connaisseur <InlineEmoji aria-label="ice-cream">🍨</InlineEmoji></LoopingText>
-                    </StyledTextLoop>
-                    {" "}<br></br>and aspiring developer hacking things together with cool new tech.{" "}
-                    <InlineEmoji aria-label="rocket">🚀</InlineEmoji>
-                </Tagline>
-                <ContactMe>
-                    Feel free to reach out &nbsp;
-                    <InlineEmoji aria-label="pointer-right">
-                        👉
-                    </InlineEmoji>{" "}
-                    &nbsp;
-                    <Email href="mailto:contact@ryanouyang.com">contact@ryanouyang.com</Email>
-                </ContactMe>
-            </HeroSection>
+            <section>
+                <HeroSection>
+                    <Hey>Hey there!</Hey>
+                    <Tagline>
+                        I'm <Name>Ryan</Name>, a{" "}
+                        <StyledTextLoop interval={2000}>
+                            <LoopingText>blockchain aficionado <InlineEmoji aria-label="web">🕸</InlineEmoji></LoopingText>
+                            <LoopingText>keyboard enthusiast <InlineEmoji aria-label="computer-keyboard">⌨️</InlineEmoji></LoopingText>
+                            <LoopingText>guitar noodler <InlineEmoji aria-label="guitar">🎸</InlineEmoji></LoopingText>
+                            <LoopingText>gelato connaisseur <InlineEmoji aria-label="ice-cream">🍨</InlineEmoji></LoopingText>
+                        </StyledTextLoop>
+                        {" "}<br></br>and aspiring developer hacking things together with cool new tech.{" "}
+                        <InlineEmoji aria-label="rocket">🚀</InlineEmoji>
+                    </Tagline>
+                    <ContactMe>
+                        Feel free to reach out &nbsp;
+                        <InlineEmoji aria-label="pointer-right">
+                            👉
+                        </InlineEmoji>{" "}
+                        &nbsp;
+                        <Email href="mailto:contact@ryanouyang.com">contact@ryanouyang.com</Email>
+                    </ContactMe>
+                </HeroSection>
+
+                {/* TODO: Fix fade in causes horizontal overflow */}
+                <FadeInUp duration="1s" delay="1s">
+                    <BottomArrow />
+                </FadeInUp>
+            </section>
         )
     }
 }

@@ -18,6 +18,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Oxygen', sans-serif;
         height: 100%;
+
+        overflow-x: hidden
     }
 `
 
