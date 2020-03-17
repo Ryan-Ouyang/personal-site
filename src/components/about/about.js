@@ -88,7 +88,7 @@ const Hyperlink = styled.a`
 `
 
 const LinkContainer = styled.div`
-    display: inline-block
+    display: inline-block;
 `
 
 const LinkIconImg = styled.img`
@@ -127,10 +127,20 @@ export default class About extends React.Component {
                                 Currently in my first year of Computer Science
                                 at the University of Waterloo and working on a
                                 layer 1{" "}
-                                <Hyperlink href="https://devpost.com/software/connexion-vy3a9c">
+                                <Hyperlink
+                                    href="https://devpost.com/software/connexion-vy3a9c"
+                                    target="_blank"
+                                >
                                     messaging solution
                                 </Hyperlink>{" "}
-                                for Ethereum.{" "}
+                                for Ethereum. Launched{" "}
+                                <Hyperlink
+                                    href="https://mangodev.io"
+                                    target="_blank"
+                                >
+                                    mangodev.io
+                                </Hyperlink>
+                                {","} an Algorand asset manager.
                             </BioBold>
                             <Bio>
                                 Previously at{" "}
