@@ -186,7 +186,7 @@ export default class Hero extends React.Component {
                     </ContactMe>
                 </HeroSection>
 
-                {/* TODO: Fix fade in causes horizontal overflow */}
+                {/* TODO: Fix fade in causes arrow to shift upward a bit */}
                 <FadeInUp duration="1s" delay="1s">
                     <BottomArrow />
                 </FadeInUp>
