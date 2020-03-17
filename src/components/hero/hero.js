@@ -2,12 +2,11 @@
 
 import React from "react"
 import styled from "styled-components"
+import { keyframes } from "styled-components"
 import TextLoop from "react-text-loop"
 
 // For bottom arrow
 import { ChevronsDown } from "styled-icons/boxicons-regular/ChevronsDown"
-import { FadeInUp } from "animate-css-styled-components"
-
 import { device, contentWidth } from "../../utils/media-queries"
 
 const HeroSection = styled.section`
@@ -147,6 +146,11 @@ const StyledTextLoop = styled(TextLoop)`
     }
 `
 
+const BottomArrowAnimation = keyframes`
+    from { opacity: 0 }
+    to { opacity: 1 }
+`
+
 // ADD styled-icons downward "learn more" arrow
 const BottomArrow = styled(ChevronsDown)`
     position: absolute;
@@ -157,6 +161,13 @@ const BottomArrow = styled(ChevronsDown)`
 
     max-height: 35px;
     max-width: 35px;
+
+    opacity: 0;
+
+    animation-name: ${BottomArrowAnimation};
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 `
 
 export default class Hero extends React.Component {
@@ -168,12 +179,31 @@ export default class Hero extends React.Component {
                     <Tagline>
                         I'm <Name>Ryan</Name>, a{" "}
                         <StyledTextLoop interval={2000}>
-                            <LoopingText>blockchain aficionado <InlineEmoji aria-label="web">🕸</InlineEmoji></LoopingText>
-                            <LoopingText>keyboard enthusiast <InlineEmoji aria-label="computer-keyboard">⌨️</InlineEmoji></LoopingText>
-                            <LoopingText>guitar noodler <InlineEmoji aria-label="guitar">🎸</InlineEmoji></LoopingText>
-                            <LoopingText>gelato connaisseur <InlineEmoji aria-label="ice-cream">🍨</InlineEmoji></LoopingText>
-                        </StyledTextLoop>
-                        {" "}<br></br>and aspiring developer hacking things together with cool new tech.{" "}
+                            <LoopingText>
+                                blockchain aficionado{" "}
+                                <InlineEmoji aria-label="web">🕸</InlineEmoji>
+                            </LoopingText>
+                            <LoopingText>
+                                keyboard enthusiast{" "}
+                                <InlineEmoji aria-label="computer-keyboard">
+                                    ⌨️
+                                </InlineEmoji>
+                            </LoopingText>
+                            <LoopingText>
+                                guitar noodler{" "}
+                                <InlineEmoji aria-label="guitar">
+                                    🎸
+                                </InlineEmoji>
+                            </LoopingText>
+                            <LoopingText>
+                                gelato connaisseur{" "}
+                                <InlineEmoji aria-label="ice-cream">
+                                    🍨
+                                </InlineEmoji>
+                            </LoopingText>
+                        </StyledTextLoop>{" "}
+                        <br></br>and aspiring developer hacking things together
+                        with cool new tech.{" "}
                         <InlineEmoji aria-label="rocket">🚀</InlineEmoji>
                     </Tagline>
                     <ContactMe>
@@ -182,14 +212,12 @@ export default class Hero extends React.Component {
                             👉
                         </InlineEmoji>{" "}
                         &nbsp;
-                        <Email href="mailto:contact@ryanouyang.com">contact@ryanouyang.com</Email>
+                        <Email href="mailto:contact@ryanouyang.com">
+                            contact@ryanouyang.com
+                        </Email>
                     </ContactMe>
-                </HeroSection>
-
-                {/* TODO: Fix fade in causes arrow to shift upward a bit */}
-                <FadeInUp duration="1s" delay="1s">
                     <BottomArrow />
-                </FadeInUp>
+                </HeroSection>
             </section>
         )
     }
