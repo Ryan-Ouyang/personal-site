@@ -53,6 +53,9 @@ const Hey = styled.h1`
     @media ${device.mobile} {
         font-size: 1.75rem;
     }
+    @media ${device.small} {
+        font-size: 1.25rem;
+    }
 `
 
 const Tagline = styled.h1`
@@ -81,6 +84,9 @@ const Tagline = styled.h1`
             display: none;
         }
     }
+    @media ${device.small} {
+        font-size: 1.25rem;
+    }
 `
 
 const Name = styled.span`
@@ -91,6 +97,10 @@ const ContactMe = styled.h1`
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.9;
+
+    @media ${device.small} {
+        font-size: 1rem;
+    }
 `
 
 const Email = styled.a`
@@ -168,6 +178,11 @@ const BottomArrow = styled(ChevronsDown)`
     animation-delay: 1s;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+
+    // Hide arrow in landscape mode
+    @media only screen and (min-device-width: 375px) and (max-device-width: 900px) and (orientation: landscape) {
+        display: none;
+    }
 `
 
 export default class Hero extends React.Component {
