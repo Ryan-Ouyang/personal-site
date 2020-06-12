@@ -124,26 +124,32 @@ export default class About extends React.Component {
                     rightColumn={
                         <BioContainer>
                             <BioBold>
-                                Currently in my first year of Computer Science
-                                at the University of Waterloo and working on a
-                                layer 1{" "}
+                                Currently doing SWE @{" "}
+                                <Hyperlink
+                                    href="https://home.kpmg/ca/en/home.html"
+                                    target="_blank"
+                                >
+                                    KPMG
+                                </Hyperlink>{" "}
+                                and working on a layer 1{" "}
                                 <Hyperlink
                                     href="https://devpost.com/software/connexion-vy3a9c"
                                     target="_blank"
                                 >
                                     messaging solution
                                 </Hyperlink>{" "}
-                                for Ethereum. Launched{" "}
+                                for Ethereum. Founded{" "}
                                 <Hyperlink
-                                    href="https://mangodev.io"
+                                    href="https://trofi.app"
                                     target="_blank"
                                 >
-                                    mangodev.io
+                                    Trofi
                                 </Hyperlink>
-                                {","} an Algorand asset manager.
+                                {","} a group buying platform for fresh local
+                                produce.
                             </BioBold>
                             <Bio>
-                                Previously at{" "}
+                                Prev @{" "}
                                 <Hyperlink href="http://jonahgroup.com">
                                     The Jonah Group
                                 </Hyperlink>{" "}
